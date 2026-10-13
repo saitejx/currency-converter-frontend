@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exchange | Currency Converter</title>
+
+    <link rel="stylesheet" href="cs/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a href="#" class="brand" aria-label="Exchange home">
+            <span class="brand-icon">E</span>
+            <span>exchange<span class="brand-period">.</span></span>
+        </a>
+
+        <span class="topbar-label">CURRENCY CONVERTER</span>
+    </header>
+
+    <main class="page">
+        <section class="intro">
+            <p class="eyebrow">SIMPLE. CLEAR. CONVENIENT.</p>
+            <h1>Currency converter</h1>
+            <p class="intro-text">
+                Convert currencies with clarity and confidence.
+            </p>
+        </section>
+
+        <section class="converter-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Convert money</h2>
+                    <p>Choose your currencies and enter an amount.</p>
+                </div>
+                <span class="live-indicator">
+                    <span class="status-dot"></span>
+                    Converter
+                </span>
+            </div>
+
+            <form id="converterForm">
+                <label for="amount">Amount</label>
+                <div class="amount-field">
+                    <input
+                        type="number"
+                        id="amount"
+                        min="0.01"
+                        step="any"
+                        placeholder="0.00"
+                        required
+                    >
+                </div>
+
+                <div class="currency-heading">
+                    <label for="fromCurrency">From</label>
+                    <label for="toCurrency">To</label>
+                </div>
+
+                <div class="currency-row">
+                    <div class="select-wrap">
+                        <select id="fromCurrency">
+                            <option value="INR">INR — Indian Rupee</option>
+                            <option value="USD">USD — US Dollar</option>
+                            <option value="EUR">EUR — Euro</option>
+                            <option value="GBP">GBP — British Pound</option>
+                            <option value="JPY">JPY — Japanese Yen</option>
+                        </select>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="swapBtn"
+                        class="swap-btn"
+                        aria-label="Swap currencies"
+                        title="Swap currencies"
+                    >⇄</button>
+
+                    <div class="select-wrap">
+                        <select id="toCurrency">
+                            <option value="USD">USD — US Dollar</option>
+                            <option value="INR">INR — Indian Rupee</option>
+                            <option value="EUR">EUR — Euro</option>
+                            <option value="GBP">GBP — British Pound</option>
+                            <option value="JPY">JPY — Japanese Yen</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="convert-btn">
+                    Convert currency
+                    <span aria-hidden="true">→</span>
+                </button>
+            </form>
+
+            <section class="result-panel" aria-live="polite">
+                <p class="result-label">CONVERSION RESULT</p>
+                <div id="result">
+                    <span class="result-placeholder">
+                        Your converted amount will appear here.
+                    </span>
+                </div>
+            </section>
+
+            <p class="disclaimer">
+                Exchange rates will be provided by the connected rate service.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <span>Exchange.</span>
+            <span>Currency conversion made simple.</span>
+        </footer>
+    </main>
+</body>
+</html>
